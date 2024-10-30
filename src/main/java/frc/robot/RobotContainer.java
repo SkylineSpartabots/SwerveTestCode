@@ -70,7 +70,7 @@ public class RobotContainer {
             .withDriveRequestType(DriveRequestType.OpenLoopVoltage); // I want field-centric
 
     public static final double translationDeadband = 0.1;
-    public static final double rotDeadband = 0.1;
+    public static final double rotDeadband = 0.15;
 
     // driving in open loop
     private final SwerveRequest.SwerveDriveBrake brake = new SwerveRequest.SwerveDriveBrake();

@@ -179,9 +179,10 @@ public class Drivetrain extends SwerveDrivetrain implements Subsystem {
     @Override
     public void periodic() {
         Pose2d currPose = getPose();
-        robotState.odometryUpdate(m_odometry.getEstimatedPosition(), Timer.getFPGATimestamp());
+        //robotState.odometryUpdate(m_odometry.getEstimatedPosition(), Timer.getFPGATimestamp());
 
         //allows driver to see if resetting worked
+        SmartDashboard.putNumber("current acceleration", (getPigeon2().getAccelerationX().getValue() - getPigeon2().getGravityVectorX().getValue()));
         SmartDashboard.putBoolean("Odo Reset (last 5 sec)", lastTimeReset != -1 && Timer.getFPGATimestamp() - lastTimeReset < 5);
         SmartDashboard.putNumber("ODO X", currPose.getX());
         SmartDashboard.putNumber("ODO Y", currPose.getY());

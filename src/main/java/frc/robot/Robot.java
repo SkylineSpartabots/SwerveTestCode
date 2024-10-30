@@ -31,6 +31,7 @@ import frc.robot.subsystems.Intake;
 import frc.robot.subsystems.Pivot;
 import frc.robot.subsystems.Shooter;
 import frc.robot.subsystems.CommandSwerveDrivetrain.Drivetrain;
+import frc.robot.subsystems.RobotState.RobotState;
 import frc.robot.subsystems.CommandSwerveDrivetrain.DriveControlSystems;
 import frc.robot.subsystems.Vision.Vision;
 
@@ -39,6 +40,7 @@ public class Robot extends LoggedRobot {
   SendableChooser<Autos.AutoPath> autoChooser = new SendableChooser<Autos.AutoPath>();
 
   private DriveControlSystems controlSystem  = new DriveControlSystems();
+  private RobotState robotState;
 
   private RobotContainer m_robotContainer;
 
@@ -59,6 +61,7 @@ public class Robot extends LoggedRobot {
     s_Vision = Vision.getInstance();
     s_Climb = Climb.getInstance();
     s_Amp = Amp.getInstance();
+    robotState = robotState.getInstance();
   }
 
   @Override

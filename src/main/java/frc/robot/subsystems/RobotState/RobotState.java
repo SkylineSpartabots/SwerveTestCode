@@ -61,7 +61,7 @@ public class RobotState { //will estimate pose with odometry and correct drift w
     private static AccelerationIntegrator accelIntegrator = new AccelerationIntegrator();
     
     Drivetrain drivetrain;
-    Pigeon2 pigeon = drivetrain.getPigeon2(); //getting the already constructed pigeon in swerve
+    Pigeon2 pigeon; //getting the already constructed pigeon in swerve
 
     ExtendedKalmanFilter<N2, N2, N2> EKF;
 
@@ -78,6 +78,7 @@ public class RobotState { //will estimate pose with odometry and correct drift w
 
     public RobotState() {
         drivetrain = Drivetrain.getInstance();
+        pigeon = drivetrain.getPigeon2();
         resetKalman();
     }
 
