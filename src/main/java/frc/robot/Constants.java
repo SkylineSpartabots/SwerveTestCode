@@ -99,7 +99,7 @@ public final class Constants {
     public static final class HardwarePorts {
         // motors (predicted) IDs not fixed
 
-        public static final int shooterBottomM = 50;
+        public static final int shooterBottomM = 900;
         public static final int shooterTopM = 51;
 
         public static final int indexerTopM = 31;
